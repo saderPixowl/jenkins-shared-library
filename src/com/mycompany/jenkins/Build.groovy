@@ -9,6 +9,8 @@ class Build implements Serializable {
   }
 
   void setBuildDescription(Map args) {
+    print "Build::setBuilDescription" + args
+
     script.currentBuild.displayName = args.title
     script.currentBuild.description = args.description
   }
